@@ -1,0 +1,2 @@
+### get avg-duration
+GET http://localhost:3000/request-monitor/avg-duration

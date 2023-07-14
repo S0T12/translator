@@ -1,0 +1,51 @@
+### get all
+Get http://localhost:3000/translation
+
+### get paginated
+Get http://localhost:3000/translation/paginated?page=1&limit=10
+
+### post translation
+POST http://localhost:3000/translation
+Content-Type: application/json
+
+{
+    "phrase": "سلام دنیا",
+    "translation": "hello world",
+    "fromLang": "fa",
+    "toLang": "en"
+}
+
+### put translation
+PUT http://localhost:3000/translation
+Content-Type: application/json
+
+{
+    "phrase": "کتاب",
+    "translation": "book",
+    "fromLang": "fa",
+    "toLang": "en",
+}
+
+
+### POST translate
+POST http://localhost:3000/translation/translate
+Content-Type: application/json
+#x-api-key: 8af37b21-0ba3-4f5b-983b-e90ca818b1dc
+
+{
+  "sourceLang": "fa",
+  "targetLang": "en",
+  "phrase": "کتاب"
+}
+
+
+### POST translate
+POST http://localhost:3000/translation/translate-by-api-key
+Content-Type: application/json
+x-open-ai-api-key: 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
+
+{
+  "sourceLang": "fa",
+  "targetLang": "en",
+  "phrase": "کتاب"
+}
